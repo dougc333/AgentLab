@@ -10,20 +10,18 @@ import litellm
 
 litellm.register_model({
   "Qwen/Qwen2-1.5B-Instruct": {
-    "litellm_provider": "openai",   # because vLLM speaks OpenAI protocol
+    "litellm_provider": "openai",   # vLLM speaks OpenAI protocol
     "mode": "chat",
-    "max_tokens": 32768,
-    "max_input_tokens": 32768,
-    "max_output_tokens": 4096,
+    "max_tokens": 2048,            # match /v1/models max_model_len
     "input_cost_per_token": 0.0,
     "output_cost_per_token": 0.0,
   }
 })
 
-
 # vLLM usually doesn't require a real key, but the OpenAI client requires *something*
+os.environ["OPENAI_BASE_URL"] = "http://127.0.0.1:8000/v1"
+os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"   # for older codepaths
 os.environ["OPENAI_API_KEY"] = "local"
-
 vllm_args = deepcopy(CHAT_MODEL_ARGS_DICT["openai/gpt-3.5-turbo-1106"])
 
 # IMPORTANT: use your vLLM-served model name here
