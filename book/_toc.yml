@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: agentlab.ipynb
+- file: agentlab_vllm.ipynb
+- file: serve_qwen.ipynb
+- file: qwen_vllm_works.ipynb
+

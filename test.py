@@ -18,6 +18,9 @@ litellm.register_model({
   }
 })
 
+
+# vLLM server at 8000
+# miniwob server at 8001
 # vLLM usually doesn't require a real key, but the OpenAI client requires *something*
 os.environ["OPENAI_BASE_URL"] = "http://127.0.0.1:8000/v1"
 os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"   # for older codepaths
