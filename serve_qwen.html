@@ -1,0 +1,1068 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=1ae7504c"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'serve_qwen';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="qwen_vllm_works.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="agentlab_vllm.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fserve_qwen.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/serve_qwen.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <p>#serve_qwen.ipynb</p>
+<p>ollama gwen ngrok</p>
+<ol>
+Env prep
+<li>copy .ssh from /content/drive/MyDrive/'Colab Notebooks'/.ssh to /root/.ssh. For git clone to work</li>
+<li>copy the .cache dir from 'Colab Notebooks' to /root to get the HF models. This takes a while is couple G. </li>
+</ol>
+</ul>
+<li>how to start ollama? and ngrok?</li>
+<li>serving models requires ollama or vllm</li>
+<li>ollama needs zstd installed</li>
+<li>there are 2 ways to start a ollama and/or ngrok process, nohup and process.popen.</li>
+<li>process.popen is more stable? </li>
+<li>ngrok start --all starts all the tunnels defined in ngrok.yml. nohup with args only starts the ollama tunnel. popen not tested on ngrok</li>
+<li>does nohup terminates unexpectly?</li>
+</ul><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;google.colab&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+
+<span class="n">info</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;cuda_available&quot;</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">(),</span>
+    <span class="s2">&quot;cuda_version&quot;</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">version</span><span class="o">.</span><span class="n">cuda</span><span class="p">,</span>
+    <span class="s2">&quot;torch_version&quot;</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">__version__</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s2">&quot;cuda_available&quot;</span><span class="p">]:</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span>
+    <span class="n">info</span><span class="p">[</span><span class="s2">&quot;device_count&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="n">info</span><span class="p">[</span><span class="s2">&quot;devices&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_properties</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">info</span><span class="p">[</span><span class="s2">&quot;devices&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span>
+            <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">i</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s2">&quot;total_memory_gb&quot;</span><span class="p">:</span> <span class="nb">round</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">total_memory</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">),</span> <span class="mi">2</span><span class="p">),</span>
+            <span class="s2">&quot;sm_count&quot;</span><span class="p">:</span> <span class="n">p</span><span class="o">.</span><span class="n">multi_processor_count</span><span class="p">,</span>
+            <span class="s2">&quot;capability&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">major</span><span class="si">}</span><span class="s2">.</span><span class="si">{</span><span class="n">p</span><span class="o">.</span><span class="n">minor</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+<span class="c1"># Retrieve the secret value from Colab Secrets</span>
+<span class="n">ngrok_key</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NGROK_AUTH_TOKEN&#39;</span><span class="p">)</span> <span class="c1"># Use the name you defined in Step 1</span>
+<span class="n">hyperbolic_key</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;HYPERBOLIC_API_KEY&#39;</span><span class="p">)</span>
+<span class="c1"># Set it as an environment variable</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HYPERBOLIC_API_KEY&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">hyperbolic_key</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;NGROK_AUTH_TOKEN&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ngrok_key</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>-q<span class="w"> </span>pyngrok<span class="w"> </span>ollama
+<span class="c1"># there is no ngrok directory, ollama is client not the ollama server</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>~/.config
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot 2026-02-23 at 7.19.08 AM.png" src="data:image/png;base64,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" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># .config/ngrok created when you add token</span>
+<span class="o">!</span>ngrok<span class="w"> </span>config<span class="w"> </span>add-authtoken<span class="w"> </span><span class="o">{</span>os.environ<span class="o">[</span><span class="s1">&#39;NGROK_AUTH_TOKEN&#39;</span><span class="o">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>~/.config
+</pre></div>
+</div>
+</div>
+</div>
+<p><img alt="Screenshot 2026-02-23 at 7.18.25 AM.png" src="data:image/png;base64,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ZiZdccUV1n28MbkRKCwspO+++45ycnKcEz3vvPMoPT3dWQ9XyM3NJXx3F3LiiSdGfFy4NnkfI8AIMAKMQGIiwESuDK/b7NmzqW3btp6/EAgEPPfxjuRDYOXKlTRo0CBav359yMmtW7eOrr322pDttg19+/alMWPGyF2TJ0+mLl262KrxNkaAEWAEGIHjAIGkJnKY7F599VV5Gd988006++yzZfnJJ58krENWrVpFJ510kizH+h8TuVgjmrjtvfTSS9SqVSvPEygJkevduzc988wzsq1JkyZR165dPdvlHYwAI8AIMALJjUBSE7krr7yStmzZQieffDL9/PPPlJqaKq/m+eefT3v37iWYs7755psyu8KmafXHH3+kW2+91fk91sg5UCR14ejRo3TxxRfTwYMH5XnCpN6sWTM688wzKSUlRW67++676ayzzooIByZyEcHElRgBRoAROC4QSFoi98MPP8iJElexefPmNH/+fHlBd+/eTVWqVJHlBx98kKZPny7L5fFP7xN+j4lceaDu/29s2LCBateuLTsCrfDXX39NWVlZUXds3rx5jka5Xbt2dOONN0bdFh/ICDACjAAjkNgIJC2RW7JkCd1xxx3y6kydOpU6deoky7qJCxPiPffcU25XkIlcuUEdVz+0YMECgsYN0rJlS3r55Zfjqn/cGUaAEWAEGIHERSBpiZxuftq2bRtVr15dXiUEH8B3DQLzauXKlWW5PP7FksghahGmulNOOYVOO+00x0RXHudRHr+ByMwDBw5Iv8ZotFf5+fkEU/bpp59OGRkZpe4y2oJpHliXVKZNm0adO3eWh/Xo0YPGjx9f0iZiXh/3DiJe8cfCCDACjAAjkLgIJAWR++qrr2jUqFGuqwAtiPJJwiSqfJHmzJlDv/32m6yrR/u1b9+err76alcbsV4pLZHbunUrjRgxgt5++23n3FQf4Xd15513Sg3j5ZdfrjYn1HL58uWE67Np0yb69NNPnb7DHNmiRQtJhmrUqOFsNwvwSRwyZAi9//779NFHHzm7a9WqRddddx0NHjw4rB9az549afv27fK4KVOmSNM3okLfeustpz/wq+zQoQMNHDjQM+2H3g4aQwqaXbt2yXZxLvDdNGXChAl02WWXmZvl+hNPPEF4GbFJx44d6aabbrLtCtmG5+Txxx8nRM/iJQaCSNlGjRrRo48+Kv9Q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" /></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cp</span> -r /content/drive/MyDrive/&#39;Colab Notebooks&#39;/.ssh /root/
+<span class="c1"># verify</span>
+<span class="o">%</span><span class="k">ls</span> -al /root
+<span class="c1"># this copies the .ssh keys to /root for github clone</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy models from /drive/MyDrive/&#39;Colab Notebooks&#39;/.cache/huggingface to /root/.cache</span>
+<span class="c1">#gigs will take a while</span>
+<span class="o">%</span><span class="k">cp</span> -r /content/drive/MyDrive/&#39;Colab Notebooks&#39;/.cache/huggingface /root/.cache/
+<span class="o">%</span><span class="k">ls</span> -al /root/.cache/huggingface/hub
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copy the ollama models to /root</span>
+<span class="o">%</span><span class="k">cp</span> -r /content/drive/MyDrive/&#39;Colab Notebooks&#39;/.ollama /root/
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="c1"># we only need ngrok.yml if we do ngrok start --all or if</span>
+<span class="c1"># we specify ngrok.yml to hold the tunnel definitions</span>
+<span class="c1"># Get the token from the environment variable</span>
+<span class="c1"># If you are using Colab Secrets, ensure you&#39;ve set NGROK_AUTH_TOKEN there first!</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;NGROK_AUTH_TOKEN&#39;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">token</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;NGROK_AUTH_TOKEN environment variable not found!&quot;</span><span class="p">)</span>
+
+<span class="c1"># Use an f-string (notice the &#39;f&#39; before the triple quotes)</span>
+<span class="n">config</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">version: &quot;2&quot;</span>
+<span class="s2">region: us</span>
+<span class="s2">authtoken: </span><span class="si">{</span><span class="n">token</span><span class="si">}</span>
+
+<span class="s2">tunnels:</span>
+<span class="s2">  ollama:</span>
+<span class="s2">    proto: http</span>
+<span class="s2">    addr: 11434</span>
+<span class="s2">    host_header: localhost:11434</span>
+<span class="s2">    domain: labrador-fair-trivially.ngrok-free.app</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Ensure the directory exists</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;/root/.config/ngrok&#39;</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/root/.config/ngrok/ngrok.yml&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">config</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ ngrok.yml updated with environment variable.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ls<span class="w"> </span>/root/.config/ngrok
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>cat<span class="w"> </span>/root/.config/ngrok/ngrok.yml
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ngrok.yml
+~/.config/ngrok/ngrok.yml
+!ngrok start --all
+!curl https://labrador-fair-trivially.ngrok-free.app/api/generate -d &#39;{ \
+  &quot;model&quot;: &quot;qwen2.5:1.5b&quot;, \
+  &quot;prompt&quot;: &quot;Write a short poem about a cat in space.&quot;, \
+  &quot;stream&quot;: false \
+}&#39;
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># install zstd for running ollama server</span>
+<span class="o">%%</span><span class="k">bash</span>
+set -e
+apt-get install zstd
+# Install ollama
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Show version
+ollama --version
+
+# Start persistent server in background
+# this doesnt stay up in anotehr cell?
+# not reliable in colab but need it to download models
+# we can run it using nohup or subprocess.Popen()
+
+#nohup ollama serve &gt; /tmp/ollama.log 2&gt;&amp;1 &amp;
+
+
+import subprocess, time, os, signal
+
+print(&quot;Starting Ollama server...&quot;)
+log = open(&quot;/tmp/ollama.log&quot;, &quot;a&quot;, buffering=1)
+p = subprocess.Popen(
+    [&quot;ollama&quot;, &quot;serve&quot;],
+    stdout=log,
+    stderr=log,
+    start_new_session=True,  # detach from notebook process group
+)
+time.sleep(1)
+print(&quot;PID:&quot;, p.pid, &quot;alive:&quot;, p.poll() is None)
+
+
+
+# Wait for server
+sleep 2
+
+# Pull model (downloads if missing)
+ollama pull qwen3-vl
+
+# Test API locally
+curl -sS http://127.0.0.1:11434/api/chat \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;{
+    &quot;model&quot;: &quot;qwen3-vl&quot;,
+    &quot;messages&quot;: [{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:&quot;Give me a 2-sentence summary of PPO.&quot;}],
+    &quot;stream&quot;: true
+  }&#39; | jq -r &#39;.message.content // empty&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># if downloading models make sure they are in /root/.ollama</span>
+<span class="c1"># and store them in /content/drive/MyDrive/&#39;Colab Notebooks&#39; so</span>
+<span class="c1"># we dont need to download them again</span>
+
+<span class="c1">#!cp -r /root/.ollama/ /content/drive/MyDrive/&#39;Colab Notebooks&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#run in colab cli verify ollama running if not start with cell below</span>
+<span class="o">!</span>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;ollama&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#nohup command</span>
+<span class="c1">#!nohup ollama serve &gt; /tmp/ollama.log 2&gt;&amp;1 &amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>More ollama utils for port</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!!</span>ss<span class="w"> </span>-ltnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">11434</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this tests ollama server server port is localhost:11434</span>
+<span class="o">!</span>curl<span class="w"> </span>-s<span class="w"> </span>http://127.0.0.1:11434/api/version
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ss<span class="w"> </span>-ltnp<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="m">11434</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+<span class="o">!</span>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;[o]llama&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>curl<span class="w"> </span>-s<span class="w"> </span>http://127.0.0.1:11434/api/tags<span class="w"> </span><span class="p">|</span><span class="w"> </span>head
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">signal</span>
+
+<span class="c1"># to stop if started with nohup</span>
+<span class="o">!</span>pkill<span class="w"> </span>-f<span class="w"> </span><span class="s2">&quot;ollama serve&quot;</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+<span class="c1"># we should have a reference to p.pid from popen</span>
+<span class="n">os</span><span class="o">.</span><span class="n">killpg</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">pid</span><span class="p">,</span> <span class="n">signal</span><span class="o">.</span><span class="n">SIGTERM</span><span class="p">)</span>  <span class="c1"># because start_new_session=True makes pid==pgid</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this is more stable than nohup?</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">os</span><span class="o">,</span><span class="w"> </span><span class="nn">signal</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting Ollama server...&quot;</span><span class="p">)</span>
+<span class="n">log</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/tmp/ollama.log&quot;</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">buffering</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span>
+    <span class="p">[</span><span class="s2">&quot;ollama&quot;</span><span class="p">,</span> <span class="s2">&quot;serve&quot;</span><span class="p">],</span>
+    <span class="n">stdout</span><span class="o">=</span><span class="n">log</span><span class="p">,</span>
+    <span class="n">stderr</span><span class="o">=</span><span class="n">log</span><span class="p">,</span>
+    <span class="n">start_new_session</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># detach from notebook process group</span>
+<span class="p">)</span>
+<span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;PID:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">pid</span><span class="p">,</span> <span class="s2">&quot;alive:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># can we start grok before installing and starting ollama? No because we customzied ngrok.yml for ollama</span>
+<span class="c1"># this loops forever for debugging and starts all teh tunnels defined in ngrok.yml</span>
+<span class="o">!</span>ngrok<span class="w"> </span>start<span class="w"> </span>--all
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># check if ngrok running, if not running will return empty</span>
+<span class="o">!</span>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;[n]grok&#39;</span>
+<span class="o">!</span>curl<span class="w"> </span>-s<span class="w"> </span>http://127.0.0.1:4040/api/tunnels<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-c<span class="w"> </span><span class="m">500</span><span class="p">;</span><span class="w"> </span>echo
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#check ollama server running</span>
+<span class="c1">#!nohup ollama serve &gt; /tmp/ollama.log 2&gt;&amp;1 &amp;</span>
+<span class="o">!</span>ollama<span class="w"> </span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kill old ngrok</span>
+<span class="c1"># 2 ways to start ngrok</span>
+<span class="c1"># 1) the grok start all command which starts all the tunnels in ngrok.yml</span>
+<span class="c1"># 2) ngrok start ollama. Ollama is the name of a specific tunnel in ngrok.yml</span>
+<span class="c1">#</span>
+<span class="o">!</span>pkill<span class="w"> </span>-f<span class="w"> </span>ngrok<span class="w"> </span><span class="o">||</span><span class="w"> </span>true
+
+<span class="c1"># Start ngrok in background with explicit inspect port</span>
+<span class="o">!</span>nohup<span class="w"> </span>ngrok<span class="w"> </span>start<span class="w"> </span>ollama<span class="w"> </span><span class="err">\</span>
+    <span class="o">--</span><span class="n">config</span><span class="o">=/</span><span class="n">root</span><span class="o">/.</span><span class="n">config</span><span class="o">/</span><span class="n">ngrok</span><span class="o">/</span><span class="n">ngrok</span><span class="o">.</span><span class="n">yml</span> \
+    <span class="o">--</span><span class="n">log</span><span class="o">=</span><span class="n">stdout</span> \
+    <span class="o">--</span><span class="n">log</span><span class="o">-</span><span class="n">level</span><span class="o">=</span><span class="n">info</span> \
+    <span class="o">&gt;</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ngrok</span><span class="o">.</span><span class="n">log</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span> <span class="o">&amp;</span>
+
+<span class="c1"># Give it time to start</span>
+<span class="o">!</span>sleep<span class="w"> </span><span class="m">5</span>
+
+<span class="c1"># Verify ngrok process</span>
+<span class="o">!</span>ps<span class="w"> </span>-ef<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;[n]grok&#39;</span>
+
+<span class="c1"># Verify inspect API</span>
+<span class="o">!</span>curl<span class="w"> </span>-s<span class="w"> </span>http://127.0.0.1:4040/api/tunnels<span class="w"> </span><span class="p">|</span><span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>json.tool
+
+<span class="c1"># If still nothing, print logs</span>
+<span class="o">!</span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span><span class="w"> </span>/tmp/ngrok.log
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>tail<span class="w"> </span>-n<span class="w"> </span><span class="m">50</span><span class="w"> </span>/tmp/ngrok.log
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this tests the ngrok connection</span>
+<span class="o">%%</span><span class="k">bash</span>
+set -e
+curl -sS http://127.0.0.1:4040/api/tunnels | jq .
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#ollama client</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="c1"># Replace with your actual ngrok URL</span>
+<span class="n">NGROK_URL</span> <span class="o">=</span> <span class="s2">&quot;https://labrador-fair-trivially.ngrok-free.app&quot;</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">NGROK_URL</span><span class="si">}</span><span class="s2">/api/tags&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Connection Successful!&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Models available:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Connection failed with status code: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;❌ Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#there are 2, ollama server and ollama client. This is ollama client</span>
+<span class="o">!</span>pip<span class="w"> </span>-q<span class="w"> </span>install<span class="w"> </span>ollama
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">ollama</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">ollama</span><span class="o">.</span><span class="n">Client</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;https://labrador-fair-trivially.ngrok-free.app&#39;</span><span class="p">)</span>
+
+<span class="n">stream</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="p">(</span>
+    <span class="n">model</span><span class="o">=</span><span class="s1">&#39;qwen3-vl&#39;</span><span class="p">,</span>
+    <span class="n">messages</span><span class="o">=</span><span class="p">[{</span><span class="s1">&#39;role&#39;</span><span class="p">:</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;content&#39;</span><span class="p">:</span> <span class="s1">&#39;Count from 1 to 20 slowly.&#39;</span><span class="p">}],</span>
+    <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Assistant: &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">chunk</span> <span class="ow">in</span> <span class="n">stream</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">chunk</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">][</span><span class="s1">&#39;content&#39;</span><span class="p">],</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>ollama<span class="w"> </span>list
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># converting to python colab cli version</span>
+<span class="c1"># the cell is running the brower gym python server http.server</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="c1"># 1. Set host to allow ngrok access</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;OLLAMA_HOST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;0.0.0.0:11434&#39;</span>
+
+<span class="c1"># 2. Start Ollama as a background process</span>
+<span class="c1"># Using Popen is generally more robust than threading for CLI daemons</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Starting Ollama server...&quot;</span><span class="p">)</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;/tmp/ollama.log&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">process</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">([</span><span class="s2">&quot;ollama&quot;</span><span class="p">,</span> <span class="s2">&quot;serve&quot;</span><span class="p">],</span> <span class="n">stdout</span><span class="o">=</span><span class="n">f</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">f</span><span class="p">)</span>
+
+<span class="c1"># 3. Wait for the server to be ready</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://localhost:11434/api/tags&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Ollama is up and running!&quot;</span><span class="p">)</span>
+            <span class="k">break</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Ollama failed to start. Check /tmp/ollama.log&quot;</span><span class="p">)</span>
+
+<span class="c1"># 4. Pull the specific Vision model</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ensuring Qwen VL is pulled...&quot;</span><span class="p">)</span>
+<span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">([</span><span class="s2">&quot;ollama&quot;</span><span class="p">,</span> <span class="s2">&quot;pull&quot;</span><span class="p">,</span> <span class="s2">&quot;qwen2.5-vl:3b&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/dougc333/BrowserGym
+</pre></div>
+</div>
+</div>
+</div>
+<ul>
+<li>git clone https://github.com/dougc333/BrowserGym</li>
+<li>cd BrowserGym</li>
+<li>make setup-miniwob to install miniwob-plusplus dir</li>
+<li>patch .env in BrowserGym to export MINIWOB_URL="http://127.0.0.1:8000/miniwob/" </li>
+<li>from a colab cell run the miniwob server, cd /content/BrowserGym/miniwob-plusplus/miniwob/html</li>
+<li>%cd /content/BrowserGym/miniwob-plusplus/miniwob/html
+!nohup python3 -m http.server 8000 --bind 127.0.0.1 > /content/miniwob_http.out 2> /content/miniwob_http.err &</li>
+<li>if you run python -m http.server 8000 make sure you are in the html subdirectory first. else the server will display what is in content. </li>
+<li>run a curl request to test !curl -sS http://127.0.0.1:8000/miniwob/ | head -n 30</li>
+<li>Should see a dir of the html tests</li>
+</ul>
+#we need the http miniwob server running in a cell either in foreground or background<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/BrowserGym/miniwob-plusplus/miniwob/html
+<span class="c1">#!nohup python -m http.server 8000</span>
+<span class="c1">#!nohup python3 -m http.server 8000 &gt; /dev/null 2&gt;&amp;1 &amp;</span>
+<span class="o">!</span>nohup<span class="w"> </span>python3<span class="w"> </span>-m<span class="w"> </span>http.server<span class="w"> </span><span class="m">8000</span><span class="w"> </span>&gt;<span class="w"> </span>server.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span><span class="w"> </span><span class="p">&amp;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>tail<span class="w"> </span>%cd<span class="w"> </span>/content/BrowserGym/miniwob-plusplus/miniwob/html/server.log
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+set -e
+# doesnt work from here, make sure to run this in colab terminal
+export MINIWOB_URL=&quot;http://localhost:8000/miniwob/&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+
+<span class="c1"># This asks the local Ollama server about the models currently in memory</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;http://localhost:11434/api/ps&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="agentlab_vllm.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="qwen_vllm_works.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
